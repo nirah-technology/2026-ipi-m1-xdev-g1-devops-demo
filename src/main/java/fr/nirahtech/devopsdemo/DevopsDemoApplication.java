@@ -9,6 +9,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class DevopsDemoApplication {
 
 	public static void main(String[] args) {
+		final String loggerLevel = System.getenv("LOGGER_LEVEL");
+		System.out.println(loggerLevel);
 		SpringApplication.run(DevopsDemoApplication.class, args);
 	}
 
