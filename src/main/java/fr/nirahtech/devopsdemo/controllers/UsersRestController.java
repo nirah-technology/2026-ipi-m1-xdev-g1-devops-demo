@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.nirahtech.devopsdemo.domain.User;
 import fr.nirahtech.devopsdemo.repositories.UsersRepository;
 
-
-
 @RestController
 @RequestMapping("/users")
 public class UsersRestController {
@@ -29,7 +27,7 @@ public class UsersRestController {
     }
 
     @PostMapping("")
-    public User postMethodName(@RequestBody User user) {
+    public User createUser(@RequestBody User user) {
         return this.usersRepository.save(user);
     }
 }
