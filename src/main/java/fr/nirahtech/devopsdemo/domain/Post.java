@@ -22,7 +22,9 @@ public class Post implements Serializable {
     private User user;
     private LocalDateTime timestamp;
     
-    public Post() { }
+    public Post() {
+        // Default constructor required by JPA
+    }
 
 
     /**

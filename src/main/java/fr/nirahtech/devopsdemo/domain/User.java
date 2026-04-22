@@ -20,7 +20,9 @@ public class User implements Serializable {
     @Column(unique = true)
     private String username;
 
-    public User() { }
+    public User() { 
+        // Default constructor required by JPA
+    }
 
     /**
      * @return the id
