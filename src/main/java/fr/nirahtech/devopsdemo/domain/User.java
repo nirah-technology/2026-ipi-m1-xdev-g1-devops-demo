@@ -2,16 +2,25 @@ package fr.nirahtech.devopsdemo.domain;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "app_users")
 public class User implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+    @Column(unique = true)
     private String username;
 
     public User() { }
-
-    public User(int id, String username) {
-        this.id = id;
-        this.username = username;
-    }
 
     /**
      * @return the id
